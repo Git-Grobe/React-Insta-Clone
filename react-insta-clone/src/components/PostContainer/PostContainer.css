@@ -1,0 +1,38 @@
+.postContainer {
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  width: 90%;
+  max-width: 1000px;
+  margin-bottom: 15px;
+}
+
+.postContainerHeader {
+  display: flex;
+  align-items: center;
+}
+
+.postContainerHeader img {
+  border-radius: 50%;
+  height: 40px;
+  margin-right: 20px;
+}
+
+.postContainerMessages {
+  width: 90%;
+}
+
+.postContainerPost {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.postContainerPost img {
+  width: 100%;
+}
+
+.postContainerLikes {
+  display: flex;
+  justify-content: space-between;
+  width: 60px;
+}

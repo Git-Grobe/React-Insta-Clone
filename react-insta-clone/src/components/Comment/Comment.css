@@ -1,0 +1,13 @@
+.comment {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.comment span {
+  font-weight: 600;
+  margin-right: 10px;
+}
+
+.comment p {
+  margin: 0;
+}

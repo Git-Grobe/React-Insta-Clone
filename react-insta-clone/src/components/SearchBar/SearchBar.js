@@ -11,12 +11,12 @@ import "./SearchBar.css";
 export default function SearchBar() {
   return (
     <div className="searchBar">
-      <FaInstagram size={45} />
+      <FaInstagram size={30} />
       <img src={logo} alt="Instagram Logo" />
       <input type="text" placeholder="Search" />
-      <FaRegCompass size={45} />
-      <FaRegHeart size={45} />
-      <FaRegUser size={45} />
+      <FaRegCompass size={30} />
+      <FaRegHeart size={30} />
+      <FaRegUser size={30} />
     </div>
   );
 }

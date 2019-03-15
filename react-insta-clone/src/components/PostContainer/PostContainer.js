@@ -4,7 +4,7 @@ import CommentSection from "../CommentSection/CommentSection";
 import "./PostContainer.css";
 
 export default function PostContainer(props) {
-  const { thumbnailUrl, username, imageUrl, likes, timestamp } = props.post;
+  const { thumbnailUrl, username, imageUrl, likes } = props.post;
   return (
     <div className="postContainer">
       <div className="postContainerHeader">
@@ -20,7 +20,6 @@ export default function PostContainer(props) {
           </div>
           <h2>{likes} likes</h2>
           <CommentSection commentList={props.post.comments} />
-          <p>{timestamp}</p>
         </div>
       </div>
     </div>

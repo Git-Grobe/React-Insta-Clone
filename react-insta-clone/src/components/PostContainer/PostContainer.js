@@ -18,7 +18,6 @@ class PostContainer extends Component {
   render() {
     const { thumbnailUrl, username, imageUrl } = this.props.post;
     const { likes } = this.state;
-    console.log(this.state.likes);
     return (
       <div className="postContainer">
         <div className="postContainerHeader">
@@ -33,7 +32,7 @@ class PostContainer extends Component {
               <FaRegComment size={25} />
             </div>
             <h2>{likes} Likes</h2>
-            <CommentSection commentList={this.props.post.comments} />
+            <CommentSection commentList={this.props.post} />
           </div>
         </div>
       </div>

@@ -7,14 +7,13 @@ class CommentSection extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      comments: this.props.commentList,
+      comments: this.props.commentList.comments,
       comment: ""
     };
   }
 
   componentDidMount() {
-    this.setState({ comments: this.props.commentList });
-    console.log(this.props);
+    this.setState({ comments: this.props.commentList.comments });
   }
 
   addNewComment = event => {
@@ -27,7 +26,6 @@ class CommentSection extends Component {
 
     comments.push(newComment);
     this.setState({ comments, comment: "" });
-    console.log(this.state.comments);
   };
 
   handleCommentChange = event => {
@@ -43,11 +41,12 @@ class CommentSection extends Component {
     return (
       <div className="commentList">
         {this.retrieveComments()}
-        <p className="timeStamp"> test</p>
+        <p className="timeStamp">{this.props.commentList.timestamp}</p>
         <form onSubmit={this.addNewComment}>
           <input
             type="text"
             onChange={this.handleCommentChange}
+            value={this.state.comment}
             placeholder="Add a comment..."
           />
         </form>
@@ -57,7 +56,7 @@ class CommentSection extends Component {
 }
 
 CommentSection.propTypes = {
-  commentList: PropTypes.array
+  commentList: PropTypes.object
 };
 
 export default CommentSection;

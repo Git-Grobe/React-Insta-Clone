@@ -17,7 +17,6 @@ class App extends Component {
       return post.username.includes(search);
     });
     this.setState({ filteredPosts });
-    console.log(this.state.filteredPosts);
   };
   render() {
     const allPosts = this.state.data.map(post => (
